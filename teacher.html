@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Teacher</title>
+    <style>
+      /* CSS styles for the text display box and title */
+      #application-text {
+        width: 100%;
+        height: 300px;
+        font-size: 18px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        white-space: pre-wrap;
+      }
+      h2 {
+        text-align: center;
+        margin-top: 40px;
+      }
+      /* CSS styles for the radio buttons */
+      .radio-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      label {
+        margin-right: 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Teacher</h1>
+    <h2>Student Request</h2>
+    <div id="application-text"></div>
+    <div class="radio-buttons">
+      <label><input type="radio" name="approval" value="approved"> Approved</label>
+      <label><input type="radio" name="approval" value="not-approved"> Not Approved</label>
+    </div>
+    <script>
+      // JavaScript code to display the text entered by the student
+      const applicationForm = document.querySelector('#application-form');
+      const applicationText = document.querySelector('#application-text');
+      applicationText.innerText = applicationForm.value;
+      applicationForm.addEventListener('input', (event) => {
+        applicationText.innerText = event.target.value;
+      });
+    </script>
+  </body>
+</html>
