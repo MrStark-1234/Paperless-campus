@@ -42,12 +42,11 @@
     </div>
     <script>
       // JavaScript code to display the text entered by the student
-      const applicationForm = document.querySelector('#application-form');
-      const applicationText = document.querySelector('#application-text');
-      applicationText.innerText = applicationForm.value;
-      applicationForm.addEventListener('input', (event) => {
-        applicationText.innerText = event.target.value;
-      });
+     
+const params = new URLSearchParams(window.location.search);
+const applicationText = document.querySelector('#application-text');
+applicationText.innerText = decodeURIComponent(params.get('application'));
+window.open(`teacher.html?application=${encodeURIComponent(applicationText)}`, '_blank');
     </script>
   </body>
 </html>

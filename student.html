@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student</title>
+    <style>
+      /* CSS styles for the title and input box */
+      h1 {
+        text-align: center;
+        margin-top: 40px;
+      }
+      #application-form {
+        width: 100%;
+        height: 300px;
+        font-size: 18px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        resize: none;
+      }
+      #submit-button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student</h1>
+    <form>
+      <h2>Application Form</h2>
+      <textarea id="application-form" name="application"></textarea>
+      <button id="submit-button" type="button">Submit</button>
+    </form>
+    <script>
+      // JavaScript code to send the text to the teacher page
+      const submitButton = document.querySelector('#submit-button');
+      submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        const applicationText = document.querySelector('#application-form').value;
+       
+      });
+    </script>
+  </body>
+</html>
